@@ -5,6 +5,13 @@ Version: 0.1.0
 Author: Alex Betts
 Maintainer: Alex Betts <alex.betts@evobio.eu>
 Description: This package contains a bunch of functions I routinely use that don't seem to exist in tidyverse packages, like calculating standard error.
-License: Creative Commons
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat
+Imports:
+    readxl (>= 1.0),
+    stats (>= 1.0),
+    utils (>= 1.0)
+  

@@ -1,8 +1,3 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
 # You can learn more about package authoring with RStudio at:
 #
 #   http://r-pkgs.had.co.nz/
@@ -13,7 +8,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-se <- compiler::cmpfun(function(x) sqrt(var(x,na.rm = T)/length(x)))
+
 
 weighted_se <- function(x, w, na.rm = TRUE) sqrt(weighted_var(x, w, na.rm = TRUE)/length(x))
 
@@ -41,3 +36,11 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
   names(x) <- sheets
   x
 }
+
+SCE_proxy<- function(){
+
+  Sys.setenv(http_proxy="http://10.85.4.54:8080", https_proxy="http://10.85.4.54:8080")
+
+}
+
+

@@ -7,6 +7,8 @@
 \description{
   Will open the excel file (.xls/.xlsx) and read all the sheets in the workbook into a named list. By default the sheets will be stored as dataframes, if you prefer tibbles, specify tibble = T.
 }
-\examples{
-  read_excel_allsheets("name of file.xls", tibble = FALSE)
+\arguments{
+    \item{filename}{Name of excel file.}
+    \item{tibble}{Logical indicating whether output should be tibble of dataframe.}
 }
+
