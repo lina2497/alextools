@@ -10,3 +10,6 @@
 \examples{
   se(1:10)
 }
+\arguments{
+    \item{x}{Numeric vector of raw data.}
+}

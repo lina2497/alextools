@@ -10,3 +10,8 @@
 \examples{
   weighted_se(1:10, 1:10)
 }
+\arguments{
+    \item{x}{Numeric vector of raw data.}
+    \item{w}{Numeric vector of weights.}
+    \item{na.rm}{Logical indicating whether or not to remove NA.}
+}

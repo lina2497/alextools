@@ -10,3 +10,7 @@
 \examples{
   not_in(1,2:5)
 }
+\arguments{
+    \item{x}{Numeric vector of raw data.}
+    \item{y}{Numeric vector of weights.}
+}
