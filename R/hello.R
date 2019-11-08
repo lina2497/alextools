@@ -13,10 +13,6 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
-
 se <- compiler::cmpfun(function(x) sqrt(var(x,na.rm = T)/length(x)))
 
 weighted_se <- function(x, w, na.rm = TRUE) sqrt(weighted_var(x, w, na.rm = TRUE)/length(x))
@@ -36,9 +32,6 @@ not_in <- function(x, y) {
   !('%in%'(x, y))
 }
 
-`%not in%` <- function (x, table) {
-  is.na(match(x, table, nomatch = NA_integer_))
-}
 
 library(readxl)
 read_excel_allsheets <- function(filename, tibble = FALSE) {
