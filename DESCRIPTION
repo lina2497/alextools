@@ -14,4 +14,4 @@ Imports:
     readxl (>= 1.0),
     stats (>= 1.0),
     utils (>= 1.0)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
