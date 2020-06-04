@@ -5,7 +5,7 @@
 \title{list_file_paths}
 \usage{
 list_file_paths(
-  path = ".",
+  path,
   pattern = NULL,
   all.files = FALSE,
   full.names = FALSE,

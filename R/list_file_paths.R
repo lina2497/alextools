@@ -2,7 +2,7 @@
 #'
 #' @description a wrapper for the base function list.files(). Instead of returning just the list of the file names, it returns the full path to those files as a named list.
 #'
-#' @param path a character vector of full path names; the default corresponds to the working directory, getwd(). Tilde expansion (see path.expand) is performed. Missing values will be ignored.
+#' @param path full path names; the default corresponds to the working directory, getwd(). Tilde expansion (see path.expand) is performed. Missing values will be ignored.
 #' @param pattern an optional regular expression. Only file names which match the regular expression will be returned.
 #' @param all.files a logical value. If FALSE, only the names of visible files are returned. If TRUE, all file names will be returned.
 #' @param full.names a logical value. If TRUE, the directory path is prepended to the file names to give a relative file path. If FALSE, the file names (rather than paths) are returned.
@@ -17,7 +17,7 @@
 #'
 
 list_file_paths <-
-  function(path = ".",
+  function(path,
            pattern = NULL,
            all.files = FALSE,
            full.names = FALSE,
@@ -26,6 +26,12 @@ list_file_paths <-
            include.dirs = FALSE,
            no.. = FALSE,
            return_absolute = FALSE) {
+
+    path <- rlang::enquo(path)
+
+    path<- rlang::as_label(path)
+
+
     files <- list.files(path,
                         pattern,
                         all.files,
@@ -44,4 +50,5 @@ list_file_paths <-
     names(file_paths) <- files
     return(file_paths)
   }
+
 
