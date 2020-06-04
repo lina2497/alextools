@@ -2,6 +2,7 @@
 
 export(SCE_proxy)
 export(error_proof)
+export(list_file_paths)
 export(not_in)
 export(read_excel_allsheets)
 export(se)
